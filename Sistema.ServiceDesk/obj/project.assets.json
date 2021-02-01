@@ -6075,11 +6075,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas.coelho\\Desktop\\Clone.Api\\SystemServiceDeskNew\\ServiceDesk\\Sistema.ServiceDesk\\Sistema.ServiceDesk.csproj",
+      "projectUniqueName": "C:\\Users\\lucas.coelho\\Desktop\\New System\\Api-NewSystem\\Sistema.ServiceDesk\\Sistema.ServiceDesk.csproj",
       "projectName": "Sistema.ServiceDesk",
-      "projectPath": "C:\\Users\\lucas.coelho\\Desktop\\Clone.Api\\SystemServiceDeskNew\\ServiceDesk\\Sistema.ServiceDesk\\Sistema.ServiceDesk.csproj",
+      "projectPath": "C:\\Users\\lucas.coelho\\Desktop\\New System\\Api-NewSystem\\Sistema.ServiceDesk\\Sistema.ServiceDesk.csproj",
       "packagesPath": "C:\\Users\\lucas.coelho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas.coelho\\Desktop\\Clone.Api\\SystemServiceDeskNew\\ServiceDesk\\Sistema.ServiceDesk\\obj\\",
+      "outputPath": "C:\\Users\\lucas.coelho\\Desktop\\New System\\Api-NewSystem\\Sistema.ServiceDesk\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lucas.coelho\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6096,8 +6096,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\lucas.coelho\\Desktop\\Clone.Api\\SystemServiceDeskNew\\ServiceDesk\\Sistema.ServiceDesk.Data\\Sistema.ServiceDesk.Data.csproj": {
-              "projectPath": "C:\\Users\\lucas.coelho\\Desktop\\Clone.Api\\SystemServiceDeskNew\\ServiceDesk\\Sistema.ServiceDesk.Data\\Sistema.ServiceDesk.Data.csproj"
+            "C:\\Users\\lucas.coelho\\Desktop\\New System\\Api-NewSystem\\Sistema.ServiceDesk.Data\\Sistema.ServiceDesk.Data.csproj": {
+              "projectPath": "C:\\Users\\lucas.coelho\\Desktop\\New System\\Api-NewSystem\\Sistema.ServiceDesk.Data\\Sistema.ServiceDesk.Data.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OrhPaWEFCFdCR8QzRuxu/vPD+lxmOKT3LdU5CRYgVO9WAeF7YVfbxmilEmhwc2IpMwVWCfC2op5gdci59wkRMw==",
+  "dgSpecHash": "c9rivbaiPRvIRsGbEd7ToWtej4QP8zfv532cKFjyLmrYj7x7bFWjzLQ8ynEmbCaCu3avaRhKMwo0jzaQBh+aYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lucas.coelho\\Desktop\\Clone.Api\\SystemServiceDeskNew\\ServiceDesk\\Sistema.ServiceDesk\\Sistema.ServiceDesk.csproj",
+  "projectFilePath": "C:\\Users\\lucas.coelho\\Desktop\\New System\\Api-NewSystem\\Sistema.ServiceDesk\\Sistema.ServiceDesk.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas.coelho\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lucas.coelho\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
