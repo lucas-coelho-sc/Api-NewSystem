@@ -1,0 +1,12 @@
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\bin\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.deps.json
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\bin\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.runtimeconfig.json
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\bin\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.runtimeconfig.dev.json
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\bin\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.dll
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\bin\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.pdb
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\obj\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.AssemblyInfoInputs.cache
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\obj\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.AssemblyInfo.cs
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\obj\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.csproj.CoreCompileInputs.cache
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\obj\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.dll
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\obj\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.pdb
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\obj\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.genruntimeconfig.cache
+C:\Users\lucas.coelho\source\repos\ServiceDesk\Sistema.ServiceDesk.Data\obj\Debug\netcoreapp3.1\Sistema.ServiceDesk.Data.csprojAssemblyReference.cache
