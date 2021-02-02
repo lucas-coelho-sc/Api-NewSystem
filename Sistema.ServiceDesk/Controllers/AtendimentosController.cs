@@ -23,12 +23,19 @@ namespace Sistema.ServiceDesk.Controllers
 
             using (var context = new _Context())
             {
-                var Search = context.AtendimentosDeltaLog.Where(x => x.shift.Contains(request.shift)).FirstOrDefault();
-                if (Search == null)
-                {
-                    return NotFound("Valores digitado não foram encontrados!");
-                }
-                return context.AtendimentosDeltaLog.Where(x => x.shift.Contains(request.shift)).FirstOrDefault();
+                var Search = context.AtendimentosDeltaLog.Where(x => x.shift.Contains(request.shift))
+                                                         .Where(x => x.placa == request.placa)
+                                                         .Where(x => x.imei == request.imei)
+                                                         .FirstOrDefault();
+                      if (Search == null)
+                      {
+                          return NotFound("Valores digitado não foram encontrados!");
+                      }
+
+                      return context.AtendimentosDeltaLog.Where(x => x.shift.Contains(request.shift))
+                                                         .Where(x => x.placa == request.placa)
+                                                         .Where(x => x.imei == request.imei)
+                                                         .FirstOrDefault();
             }
         }
 
@@ -42,13 +49,17 @@ namespace Sistema.ServiceDesk.Controllers
 
             using (var context = new _Context())
             {
-                var Search = context.AtendimentosGerais.Where(x => x.analista.Contains(request.analista)).FirstOrDefault();
+                var Search = context.AtendimentosGerais.Where(x => x.analista.Contains(request.analista))
+                                                       .Where(x => x.nomeDoUsuario.Contains(request.nomeDoUsuario))
+                                                       .Where(x => x.ticket == request.ticket).FirstOrDefault();
                 if (Search == null)
                 { 
                     return NotFound("Valores digitado não foram encontrados!");
                 }
 
-                return context.AtendimentosGerais.Where(x => x.analista.Contains(request.analista)).FirstOrDefault();
+                return context.AtendimentosGerais.Where(x => x.analista.Contains(request.analista))
+                                                 .Where(x => x.nomeDoUsuario.Contains(request.nomeDoUsuario))
+                                                 .Where(x => x.ticket == request.ticket).FirstOrDefault();
             }
             
         }
