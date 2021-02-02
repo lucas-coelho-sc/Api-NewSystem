@@ -12,5 +12,6 @@ namespace Sistema.ServiceDesk.Models
         public string filial { get; set; }
         public int ticket { get; set; }
         public string descricao { get; set; }
+
     }
 }

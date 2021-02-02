@@ -17,7 +17,7 @@ namespace Sistema.ServiceDesk.Controllers
         [HttpGet("DeltaLog")]
         public ActionResult<TblDeltaLog> DeltaLogSearch([FromQuery] GetDeltaLogModels request)
         {
-            if (request.imei <= 0) { return BadRequest($"Valor {request.imei} invalido !"); }
+            if (request.imei <= 0) { return BadRequest($"Imei \"{request.imei}\" invalido !"); }
             if (request.placa == null) { return BadRequest("O campo placa deve ser preenchido !"); }
             if (request.shift == null) { return BadRequest("O campo Shift deve ser preenchido !"); }
 
@@ -34,7 +34,7 @@ namespace Sistema.ServiceDesk.Controllers
 
 
         [HttpGet("Geral")]
-        public ActionResult<TblGeral> GeralSearch(GetGeralModels request)
+        public ActionResult<TblGeral> GeralSearch([FromQuery]GetGeralModels request)
         {
             if (request.analista == null) { return BadRequest("O campo analista não foi preenchido"); }
             if (request.nomeDoUsuario == null) { return BadRequest("O campo nome do Usuario não foi preenchido"); }
@@ -44,11 +44,13 @@ namespace Sistema.ServiceDesk.Controllers
             {
                 var Search = context.AtendimentosGerais.Where(x => x.analista.Contains(request.analista)).FirstOrDefault();
                 if (Search == null)
-                {
+                { 
                     return NotFound("Valores digitado não foram encontrados!");
                 }
+
                 return context.AtendimentosGerais.Where(x => x.analista.Contains(request.analista)).FirstOrDefault();
             }
+            
         }
 
 
@@ -83,12 +85,16 @@ namespace Sistema.ServiceDesk.Controllers
         [HttpPost("Geral")]
         public ActionResult<TblGeral> GeralIncluir(PostGeralModels request)
         {
-            if (string.IsNullOrEmpty(request.analista)) { return BadRequest("O campo \"Analista\" é obrigatório, favor preencher !"); }
-            if (string.IsNullOrEmpty(request.nomeDoUsuario)) { return BadRequest("o campo \"Nome do usuario\" é obrigatório, Favor preencher !"); }
-            if (string.IsNullOrEmpty(request.descricao)) { return BadRequest("o campo \"Descrição\" é obrigatório, Favor preencher !"); }
 
             using (var context = new _Context())
             {
+                if (string.IsNullOrEmpty(request.analista)) { return BadRequest("O campo \"Analista\" é obrigatório, favor preencher !"); }
+                if (string.IsNullOrEmpty(request.nomeDoUsuario)) { return BadRequest("o campo \"Nome do usuario\" é obrigatório, Favor preencher !"); }
+                if (string.IsNullOrEmpty(request.descricao)) { return BadRequest("o campo \"Descrição\" é obrigatório, Favor preencher !"); }
+
+                var Validator = context.Filiais.Where(x => x.filial == request.filial).FirstOrDefault();
+                if(Validator == null) {return NotFound($"Filial \"{request.filial}\" não encontrada !");}
+
                 var Save = new TblGeral();
 
                 Save.analista = request.analista;
@@ -109,18 +115,18 @@ namespace Sistema.ServiceDesk.Controllers
         {
             using(var context = new _Context())
             {
+                var Validator = context.Filiais.Where(x => x.filial == request.filial).FirstOrDefault();
+                if (Validator == null) { return NotFound($"Filial \"{request.filial}\" não encontrada !"); }
+
                 var Update = context.AtendimentosGerais.Where(x => x.id == request.id).FirstOrDefault();
-                if(Update == null)
-                {
-                    return NotFound($"O id \"{request.id}\" digitado, não foi encontrado!");
-                }
+                if(Update == null){return NotFound($"O id \"{request.id}\" digitado, não foi encontrado!");}
+
                 Update.analista = request.analista;
                 Update.nomeDoUsuario = request.nomeDoUsuario;
                 Update.filial = request.filial;
                 Update.ticket = request.ticket;
                 Update.descricao = request.descricao;
 
-                context.Add(Update);
                 context.SaveChanges();
             }
             return Ok($"Os dados do id \"{request.id}\" foram substituidos com sucesso !");
@@ -145,7 +151,6 @@ namespace Sistema.ServiceDesk.Controllers
                 Update.problema = request.problema;
                 Update.acao = request.acao;
 
-                context.Add(Update);
                 context.SaveChanges();
             }
             return Ok($"Os dados do id \"{request.id}\" foram substituidos com sucesso !");
